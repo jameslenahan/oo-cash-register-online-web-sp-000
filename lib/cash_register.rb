@@ -11,15 +11,15 @@ class CashRegister
     if quantity > 1
       i = 0
       while i < quantity
-      @items << title
+      @items << item
       i+=1
     end
     else
-      @items << title
+      @items << item
     end
   end
   
-  def apply_discount()
+  def apply_discount
     if @discount > 0
       @discount = @discount/100.to_f
       @total = @total - (@total * (@discount))
